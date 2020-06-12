@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息注册页面</title>
+</head>
+<body>
+    <form>
+        <table align="center">
+            <caption><h1>个人信息注册页面</h1></caption>
+            <tr>
+                <th>用户名:</th>
+                <td>
+                    <input type="text" maxlength="12" required
+                    pattern="^[a-zA-Z][a-zA-Z0-9_] {4,11}$" autofocus />
+                </td> 
+                <td>（必填，用户名以字母开头，长度在5-12字节之间，允许包含字母、数字和下划线）</td>
+            </tr>
+            <tr>
+                <th>密码:</th>
+                <td>
+                    <input type="password" maxlength="12" required
+                    pattern="^[a-zA-Z]\w{5,17}$" />
+                </td> 
+                <td>（必填，以字母开头，长度在6-18之间，只能包含字母、数字和下划线）</td>
+            </tr>
+            <tr>
+                <th>密码确认:</th>
+                <td>
+                    <input type="password" required />
+                </td> 
+                <td>（必填）</td>
+            </tr>
+            <tr>
+                <th>真实姓名:</th>
+                <td>
+                    <input type="text" required />
+                </td> 
+                <td>（必填）</td>
+            </tr>
+            <tr>
+                <th>出生日期:</th>
+                <td>
+                    <input name="rirth" type="date" value="1990/10/10" />
+                </td> 
+            </tr>
+            <tr>
+                <th>固定电话:</th>
+                <td>
+                    <input type="tel" pattern="^(\d{3,4}\-?)?\d{7,8}$" />
+                </td> 
+                <td>（固定电话格式：0000-123456789、000-13245678、1234567、12346578、00001234657、00012345678）</td>
+            </tr>
+            <tr>
+                <th>手机号码:</th>
+                <td>
+                    <input type="tel" pattern="^[3][4][5][8][0-9]\d{4,8}$" />
+                </td> 
+            </tr>
+            <tr>
+                <th>E-mail地址:</th>
+                <td>
+                    <input type="email" multiple />
+                </td> 
+                <td>（用户向您发送电子邮件，请确保输入正确，可以输入多个。）</td>
+            </tr>
+            <tr>
+                <th>博客页面：</th>
+                <td>
+                    <input type="url" placeholder="http://www.baidu.com" />
+                </td> 
+            </tr>
+            <tr>
+                <th>身份证号码：</th>
+                <td>
+                    <input type="text" pattern="^\d{8,18}|[0-9x]{8,18}|[0-9x]{8,18}?$" />
+                </td> 
+                <td>（以数字、尾字母为x的短身份证号）</td>
+            </tr>
+            <tr>
+                <th>教育情况：</th>
+                <td>
+                    <select>
+                        <option>小学</option>
+                        <option>初中</option>
+                        <option>高中</option>
+                        <option>大专</option>
+                        <option>本科</option>
+                        <option>研究生</option>
+                        <option>硕士</option>
+                        <option>其他</option>
+                        </select>
+                </td> 
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="提交"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="重置"/>
+                </td>><br/>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
